@@ -136,6 +136,8 @@ pub struct EpochParameters {
     pub max_collateral_inputs: Option<Integer>,
     /// The cost per UTxO word.
     pub coins_per_utxo_word: Option<String>,
+
+    pub cost_models: Option<JsonMap>,
 }
 
 /// Created by [`epochs_stakes`](BlockFrostApi::epochs_stakes) method.
