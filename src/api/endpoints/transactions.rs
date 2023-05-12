@@ -371,7 +371,8 @@ mod tests {
       "pool_update_count": 0,
       "pool_retire_count": 0,
       "asset_mint_or_burn_count": 0,
-      "redeemer_count": 0
+      "redeemer_count": 0,
+      "block_time": 0
     }
     "# }
 
@@ -445,7 +446,8 @@ mod tests {
               "quantity": "12",
               "data_hash": "9e478573ab81ea7a8e31891ce0648b81229f408d596a3483e6f4f9b92d3cf710"
             }
-          ]
+          ],
+          "output_index": 0
         }
       ]
     }
