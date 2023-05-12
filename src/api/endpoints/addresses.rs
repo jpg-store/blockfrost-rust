@@ -53,14 +53,22 @@ pub struct AddressTotal {
 /// Created by [`addresses_utxos`](BlockFrostApi::addresses_utxos) method.
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct AddressUtxo {
+    /// Bech32 encoded addresses - useful when querying by payment_cred
+    pub address: String,
     /// Transaction hash of the UTXO.
     pub tx_hash: String,
     /// UTXO index in the transaction.
     pub output_index: u32,
     /// Sum of assets for this UTXO.
     pub amount: Vec<Amount>,
-    /// Block number of the UTXO.
+    /// Block hash of the UTXO.
     pub block: String,
+    /// The hash of the transaction output datum
+    pub data_hash: Option<String>,
+    /// CBOR encoded inline datum
+    pub inline_datum: Option<String>,
+    /// The hash of the reference script of the output
+    pub reference_script_hash: Option<String>,
 }
 
 /// Created by [`addresses_transactions`](BlockFrostApi::addresses_transactions) method.
@@ -137,6 +145,7 @@ mod tests {
     [
       {
         "tx_hash": "39a7a284c2a0948189dc45dec670211cd4d72f7b66c5726c08d9b3df11e44d58",
+        "address": "addr1qxqs59lphg8g6qndelq8xwqn60ag3aeyfcp33c2kdp46a09re5df3pzwwmyq946axfcejy5n4x0y99wqpgtp2gd0k09qsgy6pz",
         "output_index": 0,
         "amount": [
           {
@@ -148,6 +157,7 @@ mod tests {
       },
       {
         "tx_hash": "4c4e67bafa15e742c13c592b65c8f74c769cd7d9af04c848099672d1ba391b49",
+        "address": "addr1qxqs59lphg8g6qndelq8xwqn60ag3aeyfcp33c2kdp46a09re5df3pzwwmyq946axfcejy5n4x0y99wqpgtp2gd0k09qsgy6pz",
         "output_index": 0,
         "amount": [
           {
@@ -159,6 +169,7 @@ mod tests {
       },
       {
         "tx_hash": "768c63e27a1c816a83dc7b07e78af673b2400de8849ea7e7b734ae1333d100d2",
+        "address": "addr1qxqs59lphg8g6qndelq8xwqn60ag3aeyfcp33c2kdp46a09re5df3pzwwmyq946axfcejy5n4x0y99wqpgtp2gd0k09qsgy6pz",
         "output_index": 1,
         "amount": [
           {
