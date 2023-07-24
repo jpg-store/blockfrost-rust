@@ -281,6 +281,9 @@ pub struct TransactionUtxosOutput {
     pub data_hash: Option<String>,
     /// UTXO index in the transaction.
     pub output_index: Integer,
+    pub inline_datum: Option<String>,
+    pub collateral: bool,
+    pub reference_script_hash: Option<String>,
 }
 
 /// Inner enum for [`TransactionMir`].
