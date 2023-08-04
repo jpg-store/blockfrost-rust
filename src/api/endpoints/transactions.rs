@@ -267,6 +267,8 @@ pub struct TransactionUtxosInput {
     pub output_index: Integer,
     /// The hash of the transaction output datum.
     pub data_hash: Option<String>,
+    /// The inline datum of the transaction datum.
+    pub inline_datum: Option<String>,
     // Whether the input is a collateral consumed on script validation failure.
     pub collateral: bool,
 }
