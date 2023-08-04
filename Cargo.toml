@@ -1,10 +1,6 @@
 [package]
 name = "blockfrost"
-<<<<<<< HEAD
 version = "1.0.0"
-=======
-version = "0.3.3"
->>>>>>> c7f0f36 (add missing TransactionOutputs fields)
 edition = "2021"
 keywords = ["blockfrost", "blockchain", "cardano", "ipfs", "nft"]
 categories = ["api-bindings", "asynchronous", "cryptography::cryptocurrencies"]
