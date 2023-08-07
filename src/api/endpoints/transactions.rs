@@ -305,6 +305,8 @@ pub struct TransactionUtxosInput {
     pub inline_datum: Option<String>,
     // Whether the input is a collateral consumed on script validation failure.
     pub collateral: bool,
+    // Whether the input is a collateral consumed on script validation failure.
+    pub reference: bool,
 }
 
 /// Inner member of [`TransactionUtxos`].
