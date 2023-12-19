@@ -15,8 +15,7 @@ pub mod types;
 pub use api::*;
 pub use error::*;
 pub use ipfs::BlockfrostIPFS;
-pub use pagination::Order;
-pub use pagination::Pagination;
+pub use pagination::*;
 pub use settings::*;
 pub use types::*;
 
